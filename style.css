@@ -1,0 +1,138 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*   {
+    margin: 0;
+    border: border-box;
+}
+
+body    {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.container  {
+    width: 57rem;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 19rem);
+   /*  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); */
+    justify-self: center;
+    align-self: center;
+}
+
+.card h1  {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.3rem;
+    color: hsl(0, 0%, 95%);
+}
+
+.card p  {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .85rem;
+    line-height: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 14rem;
+}
+
+.card   {
+    display: grid;
+    grid-template-rows: 4rem 4.5rem 11.5rem 3rem ;
+    gap: rem;
+}
+
+.card-sedans    {
+    background-color: hsl(31, 77%, 52%);
+    padding: 3rem;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.card-suvs   {
+    background-color: hsl(184, 100%, 22%);
+    padding: 3rem;
+}
+
+.card-luxury    {
+    background-color: hsl(179, 100%, 13%);
+    padding: 3rem;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.car-icon   {
+    width: 3.5rem;
+    height: auto;
+}
+
+.card-btn   {
+    width: 9rem;
+    height: 2.7rem;
+    background-color: hsl(0, 0%, 95%);
+    border: solid 2px hsl(0, 0%, 95%);
+    border-radius: 2rem;
+    color: transparent;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .9rem;
+    align-self: center;
+}
+
+.card-sedans .card-btn  {
+    color: hsl(31, 77%, 52%);
+}
+
+.card-suvs .card-btn  {
+    color: hsl(184, 100%, 22%);
+}
+
+.card-luxury .card-btn  {
+    color: hsl(179, 100%, 13%);
+}
+
+.card-btn:hover   {
+    width: 9rem;
+    height: 3rem;
+    background-color: transparent;
+    border: solid 2px hsl(0, 0%, 95%);
+    border-radius: 2rem;
+    color: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    transition: ease .3s;
+}
+
+
+@media only screen and (max-width: 500px)   {
+
+    body    {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .container  {
+        width: 100%;
+        height: 31rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 22rem;
+        justify-self: center;
+        align-self: center;
+        
+        }
+        
+        .card-sedans    {
+            border-radius: 0.5rem .5rem 0 0;
+        }   
+                
+        .card-luxury    {
+            border-radius: 0    0 .5rem .5rem;
+        }
+}
